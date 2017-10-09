@@ -14,11 +14,11 @@ import com.imooc.util.CommendTranser;
 public class SocketThread  extends Thread{
 
 	private Socket socket=null;
-	private ObjectInputStream ois =null;//¶ÔÏóÊäÈëÁ÷
-    private ObjectOutputStream oos=null;//¶ÔÏóÊä³öÁ÷
-    private UsersService us=new UsersService();//ÓÃ»§ÒµÎñ¶ÔÏó
-    private FileService fs=new FileService();//ÎÄ¼þÒµÎñ¶ÔÏó
-    //Í¨¹ý¹¹Ôì·½·¨,³õÊ¼»¯socket
+	private ObjectInputStream ois =null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private ObjectOutputStream oos=null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private UsersService us=new UsersService();//ï¿½Ã»ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½
+    private FileService fs=new FileService();//ï¿½Ä¼ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½
+    //Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½,ï¿½ï¿½Ê¼ï¿½ï¿½socket
 	public SocketThread (Socket socket){
 		this.socket=socket;
 	}
@@ -44,9 +44,9 @@ public class SocketThread  extends Thread{
         		 boolean flag=us.Denglu(users);
                    transer.setFlag(flag);
                    if(flag){
-                	   transer.setResult("µÇÂ¼³É¹¦");
+                	   transer.setResult("ï¿½ï¿½Â¼ï¿½É¹ï¿½");
                    }else{
-                	   transer.setResult("ÓÃ»§Ãû»òÃÜÂë²»ÕýÈ·");
+                	   transer.setResult("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½ï¿½È·");
                    }
         	 }else if(cmd.equals("zhuce")){
         		 Users users=(Users)transer.getData();
@@ -54,15 +54,15 @@ public class SocketThread  extends Thread{
                  boolean flag= us.Denglu(users);
         	     transer.setFlag(flag);
         	     if(flag){
-        	    	 transer.setResult("×¢²á³É¹¦");
+        	    	 transer.setResult("×¢ï¿½ï¿½É¹ï¿½");
         	     }else{
-        	    	 transer.setResult("×¢²áÊ§°Ü£¬Î´ÖªÔ­Òò");
+        	    	 transer.setResult("×¢ï¿½ï¿½Ê§ï¿½Ü£ï¿½Î´ÖªÔ­ï¿½ï¿½");
         	     
         	     }	 
         	     }else if(cmd.equals("uploadFile")){
         	     File file=(File)transer.getData();
         	     fs.savefile(file);
-                 transer.setResult(" ÉÏ´«³É¹¦");   	     
+                 transer.setResult(" ï¿½Ï´ï¿½ï¿½É¹ï¿½");   	     
         	     }
         	 return transer;
          }

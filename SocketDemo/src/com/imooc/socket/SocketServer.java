@@ -15,7 +15,7 @@ public class SocketServer {
         System.out.println("");
 		while(true){
 			 socket=serversocket.accept();
-			System.out.println("»¶Ó­Äú..");
+			System.out.println("ï¿½ï¿½Ó­ï¿½ï¿½..");
 			SocketThread thread=new SocketThread(socket);
 			thread.start();
 			

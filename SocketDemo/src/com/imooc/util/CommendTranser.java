@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class CommendTranser implements  Serializable {
 	private static final long serialVersionUID = 1L;
-	private String cmd;//µ±Ç°²Ù×÷µÄÃüÁî
-	private Object data;//·¢ËÍµÄÊý¾Ý
-	private boolean flag;//²Ù×÷ÊÇ·ñ³É¹¦
-	private String result;//·µ»ØµÄ½á¹û
+	private String cmd;//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private Object data;//ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½
+	private boolean flag;//ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½É¹ï¿½
+	private String result;//ï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½
 	public String getCmd() {
 		return cmd;
 	}

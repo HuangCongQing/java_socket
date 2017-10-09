@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-//×¢£ºÎÒÊÇ½«Ô­À´µÄÒýÓÃUtil util=new Util();
+//×¢ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Util util=new Util();
    
 public class Util {
 //	private static final String URL = "jdbc:mysql://127.0.0.1:3306/imooc";
@@ -15,7 +15,7 @@ public class Util {
 //	public static Connection conn=null;
 //
 //	static{
-//	// »ñµÃÊý¾Ý¿âµÄÁ¬½Ó
+//	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //	try {
 //		Class.forName("com.mysql.jdbc.Driver");
 //		conn = DriverManager.getConnection(URL, NAME, PASSWORD);
@@ -49,7 +49,7 @@ public class Util {
 		return conn;
 	}
 
-//	¹Ø±Õ×ÊÔ´µÄ²Ù×÷
+//	ï¿½Ø±ï¿½ï¿½ï¿½Ô´ï¿½Ä²ï¿½ï¿½ï¿½
 	public static  void closeAll( Connection conn,Statement stmt,ResultSet rs){
 		
 		try {

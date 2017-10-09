@@ -32,7 +32,7 @@ public class SocketClient {
 	// BufferedReader bfr=new BufferedReader(isr);
 	// String info;
 	// while((info=bfr.readLine())!=null){
-	// System.out.println("ÎÒÊÇ¿Í»§¶Ë "+"\t"+"·şÎñÆ÷Ëµ"+info);
+	// System.out.println("ï¿½ï¿½ï¿½Ç¿Í»ï¿½ï¿½ï¿½ "+"\t"+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµ"+info);
 	// }
 	//
 	//
@@ -41,10 +41,10 @@ public class SocketClient {
 	// pw.write(in);
 
 	public void showMainMenu() {
-		System.out.println("******»¶Ó­Ê¹ÓÃimoocÉÏ´«Æ÷*******");
-		System.out.println("1 ÓÃ»§µÇÂ¼  £¬2 ÓÃ»§×¢²á £¬3 ÍË³ö");
+		System.out.println("******ï¿½ï¿½Ó­Ê¹ï¿½ï¿½imoocï¿½Ï´ï¿½ï¿½ï¿½*******");
+		System.out.println("1 ï¿½Ã»ï¿½ï¿½ï¿½Â¼  ï¿½ï¿½2 ï¿½Ã»ï¿½×¢ï¿½ï¿½ ï¿½ï¿½3 ï¿½Ë³ï¿½");
 		System.out.println("***************************");
-		System.out.println("ÇëÑ¡Ôñ£º¡·¡·¡·¡·¡·¡·¡·¡·");
+		System.out.println("ï¿½ï¿½Ñ¡ï¿½ñ£º¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		int choose = scan.nextInt();
 		switch (choose) {
 		case 1:
@@ -54,27 +54,27 @@ public class SocketClient {
 			showzhuce();
 			break;
 		case 3:
-			System.out.println("ÔÙ¼ûÁË£¬ÄãÕ¨ÁË");
+			System.out.println("ï¿½Ù¼ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Õ¨ï¿½ï¿½");
 			System.exit(0);
 		default:
-			System.out.println(" ÊäÈëÓĞÎó");
+			System.out.println(" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			System.exit(0);
 		}
 	}
 
 	public void showlogin() {
 		Users users = new Users();
-		System.out.println("»¶Ó­Ê¹ÓÃµÇÂ¼");
+		System.out.println("ï¿½ï¿½Ó­Ê¹ï¿½Ãµï¿½Â¼");
 		CommendTranser transer = new CommendTranser();
 		int count = 0;
 		while (true) {
 			if (count >= 3) {
-				System.out.println("ÄúÒÑ¾­Èı´ÎÊäÈëÊ§°Ü£¬ÔÙ¼û");
+				System.out.println("ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½Ù¼ï¿½");
 				System.exit(0);
 			}
-			System.out.println("ÇëÊäÈëÓÃ»§Ãû");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½");
 			users.setUsername(scan.next());
-			System.out.println("ÇëÊäÈëÃÜÂë");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			users.setPassword(scan.next());
 			transer.setCmd("login");
 			transer.setData(users);
@@ -103,17 +103,17 @@ public class SocketClient {
 
 	public void showzhuce() {
 		Users users = new Users();
-		System.out.println("»¶Ó­Ê¹ÓÃ×¢²á");
+		System.out.println("ï¿½ï¿½Ó­Ê¹ï¿½ï¿½×¢ï¿½ï¿½");
 		CommendTranser transer = new CommendTranser();
 		while (true) {
-			System.out.println("ÇëÊäÈëÓÃ»§Ãû");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½");
 			users.setUsername(scan.next());
-			System.out.println(" ÇëÊäÈëÃÜÂë");
+			System.out.println(" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			users.setPassword(scan.next());
-			System.out.println("ÇëÔÙ´ÎÊäÈëÃÜÂë");
+			System.out.println("ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			String rePassword = scan.next();
 			if (!users.getPassword().equals(rePassword)) {
-				System.out.println("Á©´ÎÊäÈë²»Ò»ÖÂ");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»Ò»ï¿½ï¿½");
 				System.out.println("**************");
 				continue;
 			}
@@ -140,7 +140,7 @@ public class SocketClient {
 	}
 
 	public void showUploadFile() {
-		System.out.println("ÇëÊäÈëÉÏ´«µÄ¾ø¶ÔÂ·¾¶ Èç£º (e://imooc//dog.jpg)");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Â·ï¿½ï¿½ ï¿½ç£º (e://imooc//dog.jpg)");
 		String path = scan.next();
 
 		File file = null;
@@ -185,7 +185,7 @@ public class SocketClient {
 
 
 	public CommendTranser sendData(CommendTranser transer) {
-	    ObjectOutputStream oos=null;//¶ÔÏóÊä³öÁ÷
+	    ObjectOutputStream oos=null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		    try {
 		     oos=new ObjectOutputStream(socket.getOutputStream());
 		     oos.writeObject(transer);
@@ -198,7 +198,7 @@ public class SocketClient {
 	
 	
 	public CommendTranser  getDate(){
-		ObjectInputStream ois =null;//¶ÔÏóÊäÈëÁ÷
+		ObjectInputStream ois =null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		CommendTranser transer = null;
 		 try {
 			ois=new ObjectInputStream(socket.getInputStream());
